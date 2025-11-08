@@ -3,7 +3,7 @@ layout: base.njk
 ---
 <main>
     <h2>{{ title }}</h2>
-    <p class="post-date">發布日期: {{ date | date: "%Y年%m月%d日" }}</p>
+    <p class="post-date">發布日期: {{ date | date("%Y年%m月%d日") }}</p>
     {{ content | safe }}
 </main>
 <aside id="sidebar">

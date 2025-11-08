@@ -8,7 +8,7 @@ title: 我的部落格
 <main>
     {% if newestPost %}
         <h2>{{ newestPost.data.title }}</h2>
-        <p class="post-date">發布日期: {{ newestPost.date | date: "%Y年%m月%d日" }}</p>
+        <p class="post-date">發布日期: {{ newestPost.date | date("%Y年%m月%d日") }}</p>
         {{ newestPost.content | safe }}
     {% else %}
         <h2>歡迎來到我的部落格！</h2>
