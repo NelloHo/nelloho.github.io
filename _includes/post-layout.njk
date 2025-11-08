@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+<main>
+    <h2>{{ title }}</h2>
+    <p class="post-date">發布日期: {{ date | date: "%Y年%m月%d日" }}</p>
+    {{ content | safe }}
+</main>
+<aside id="sidebar">
+    <h2>所有文章</h2>
+    <ul id="post-list">
+        {% for post in collections.posts %}
+            <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+        {% endfor %}
+    </ul>
+</aside>
